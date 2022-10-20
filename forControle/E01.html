@@ -8,11 +8,28 @@
 
     //ENTRADA
 
+    const quantidadeDeAlunos = parseInt(prompt("Quantos Alunos há na Sua Sala?"));
 
-    //PROCESSAMENTO
+    let chad = [];
 
+    let woman = [];
 
-    //SAÍDA
+    for (let alunos = 1; alunos <= quantidadeDeAlunos; alunos++) {
 
-    
+         let nomes = prompt(`Qual é o Nome do Aluno N:${alunos}?`)
+         let genero = prompt(`É Menino (M) ou Menina? (F) N:${alunos}?`).trim().toUpperCase();
+
+         if (genero === "M") {
+
+            chad.push(nomes);
+            
+         } else {
+
+            woman.push(nomes);
+            
+         }
+    }
+
+    document.write(`Quantidade de Alunos: ${quantidadeDeAlunos} <br> Meninos: ${chad.sort().join(" - ")} <br> Meninas: ${woman.sort().join(" - ")}`)
+
 </script>

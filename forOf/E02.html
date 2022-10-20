@@ -7,13 +7,13 @@
     Apresente os nomes dos descendentes da família Silva e também a quantidade de descendentes da família Silva.
     */
 
-    //ENTRADA
+    let nomePessoas = ["Eduardo da Silva", "Eduardo Montandon", "Lucas Eduardo", "José da Silva", "Rafael Gonçalves"];
+    let silva = [];
 
-
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
-
+    for (let nome of nomePessoas) {
+        if (nome.indexOf("Silva") >= 0) {
+        silva.push(nome);
+    }
+}
+document.write(`Descendetes da Familia Silva: ${silva} <br> Quantidade: ${silva.length}`);
 </script>
