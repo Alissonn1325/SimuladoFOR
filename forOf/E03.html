@@ -15,7 +15,7 @@
 
         let pergunta = prompt(`${livro} é Romance (R) Ou Técnico (T) ?`).toUpperCase();
 
-        if (livro === "T") {
+        if (pergunta === "T") {
 
             livrosTecnicos.push(livro);
         } else {
@@ -23,5 +23,5 @@
             livrosRomance.push(livro); 
         }
     }
-    document.write(`Livros de Romance: ${livrosRomance} <br> Livros Tecnicos: ${livrosTecnicos} <br> Quantidade de Livros Romance: ${livrosRomance.length} <br> Quantidade de Livros Técnicos: ${livrosTecnicos.length}`);
+    document.write(`Livros de Romance: ${livrosRomance.join(" - ")} <br> Livros Tecnicos: ${livrosTecnicos.join(" - ")} <br> Quantidade de Livros Romance: ${livrosRomance.length} <br> Quantidade de Livros Técnicos: ${livrosTecnicos.length}`);
 </script>

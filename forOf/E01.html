@@ -9,11 +9,14 @@
 
     let precoKgArroz = [3.90, 4.80, 5.75, 6.99, 7.00, 4.99, 5.19];
 
-    const preçoTotal = 0;
+    let precoTotal = 0;
 
-    for (arroz of precoKgArroz) {
-        
-        
+    for (let arroz of precoKgArroz) {
+        precoTotal = precoTotal + arroz;
     }
+        let media = precoTotal / precoKgArroz.length;
+        let maiorPreco = precoKgArroz.sort((a,b) => b - a)[0];
+        let menorPreco = precoKgArroz.sort((a,b) => a - b)[0];
 
+        document.write(`Média: ${media.toFixed(2)}R$ <br> Mais Caro: ${maiorPreco.toFixed(2)}R$ <br> Mais Barato: ${menorPreco.toFixed(2)}R$`)
 </script>
