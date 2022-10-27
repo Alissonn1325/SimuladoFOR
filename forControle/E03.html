@@ -9,12 +9,16 @@
     - Investimento Inicial
     - Quantidade de meses necessário para ser duplicado
     */
-   const valorInicial = parseInt(prompt("Qual o Valor que Você Deseja Investir?"))
-   const dobroValor = valorInicial * 2
-   const valorAumento = valorInicial + (valorInicial * 0.005)
+    let valorInicial = Number(prompt("niggas"));
+    const valorFinal = valorInicial * 2;
 
-   for (let meses = 1; meses <= dobroValor; meses++) {
-    
-    
-   }
+    let meses = 0;
+
+    for (meses = 0; valorInicial <= valorFinal; meses++) {
+
+        valorInicial = valorInicial + (valorInicial * 0.005);
+
+    }
+
+    document.write(`Valor Inicial: R$: ${(valorFinal / 2).toFixed(2)} <br> Quantidade de Meses Necessários: ${meses} Para Duplicar o Valor.`);
 </script>

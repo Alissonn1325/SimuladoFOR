@@ -11,21 +11,23 @@
     - A quilometragem total percorrida
     */
 
-   const quantidadeAbasteceu = parseInt(prompt("Quantas Vezes Você Já Abasteceu Aqui?"));
-   const distanciaTotal = Number(prompt("Qual a Distância que Você Percorreu? (Em KM)"));
+    const quantidadeAbasteceu = parseInt(prompt("Quantas Vezes Você Já Abasteceu Aqui?"));
+    const quilometragem = Number(prompt("Qual a Distância que Você Percorreu? (Em KM)"));
 
-   let soma = 0;
+    let total = 0;
+    let media = 0;
 
-   for (let abasteceu = 1; abasteceu <= quantidadeAbasteceu; abasteceu++) {
+    for (let abasteceu = 1; abasteceu <= quantidadeAbasteceu; abasteceu++) {
 
-    const preçoAbastecimento = Number(prompt(`Qual foi O Preço do ${abasteceu} Abastecimento?`));
+        const preçoAbastecimento = Number(prompt(`Qual foi O Preço do ${abasteceu} Abastecimento?`));
 
+        total = total + preçoAbastecimento;
 
-
+    }
     
-   }
+    media = quilometragem / total;
 
-   document.write(``)
+    document.write(`Custo De Cada Quilômetro Percorrido: ${media.toFixed(2)} <br> Custo Total dos Abastecimentos Efetuados: ${total.toFixed(2)} <br> Quilometragem Total Percorrida: ${quilometragem.toFixed(2)}`);
 
 
 </script>

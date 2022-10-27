@@ -9,19 +9,24 @@
 
     let listaLivros = ["A Arte da Guerra", "Sistemas Inteligentes", "Introdução a Programação com JS", "1984", "Use a cabeça: JS"];
     let livrosTecnicos = [];
-    let livrosRomance =  [];
+    let livrosRomance = [];
+    let DUMBASS = [];
 
     for (let livro of listaLivros) {
 
-        let pergunta = prompt(`${livro} é Romance (R) Ou Técnico (T) ?`).toUpperCase();
+        let categoria = prompt(`${livro} é Romance (R) Ou Técnico (T) ?`).toUpperCase();
 
-        if (pergunta === "T") {
+        if (categoria === "T") {
 
             livrosTecnicos.push(livro);
-        } else {
+        } else if (categoria === "R") {
 
-            livrosRomance.push(livro); 
+            livrosRomance.push(livro);
+        }
+        else {
+
+            DUMBASS.push(livro);
         }
     }
-    document.write(`Livros de Romance: ${livrosRomance.join(" - ")} <br> Livros Tecnicos: ${livrosTecnicos.join(" - ")} <br> Quantidade de Livros Romance: ${livrosRomance.length} <br> Quantidade de Livros Técnicos: ${livrosTecnicos.length}`);
+    document.write(`Livros de Romance: ${livrosRomance.join(" - ")} <br> Livros Tecnicos: ${livrosTecnicos.join(" - ")} <br> Livros Sem Categorias: ${DUMBASS.join(" - ")} <br> Quantidade de Livros Romance: ${livrosRomance.length} <br> Quantidade de Livros Técnicos: ${livrosTecnicos.length} <br> Quantidade de Livros Sem Categoria: ${DUMBASS.length}`);
 </script>

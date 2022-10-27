@@ -1,35 +1,35 @@
 <script>
-    /*
-    PROBLEMA: Lista de Alunos
-    Peça para o Professor informar a quantidade de alunos que possui.
-    Após, usando a estrutura de repetição "for com variável de controle", peça para o Professor informar o nome dos alunos e também informar se é menino ou menina.
-    Separe-os em duas listas e apresente o nome dos meninos ordenados alfabeticamente, que estarão em uma lista, e o nome das meninas também ordenados alfabeticamente, que estarão em outra lista.
-    */
+   /*
+   PROBLEMA: Lista de Alunos
+   Peça para o Professor informar a quantidade de alunos que possui.
+   Após, usando a estrutura de repetição "for com variável de controle", peça para o Professor informar o nome dos alunos e também informar se é menino ou menina.
+   Separe-os em duas listas e apresente o nome dos meninos ordenados alfabeticamente, que estarão em uma lista, e o nome das meninas também ordenados alfabeticamente, que estarão em outra lista.
+   */
 
-    //ENTRADA
+   //ENTRADA
 
-    const quantidadeDeAlunos = parseInt(prompt("Quantos Alunos há na Sua Sala?"));
+   const quantidadeDeAlunos = parseInt(prompt("Quantos Alunos há na Sua Sala?"));
 
-    let chad = [];
+   let chad = [];
 
-    let woman = [];
+   let woman = [];
 
-    for (let alunos = 1; alunos <= quantidadeDeAlunos; alunos++) {
+   for (let alunos = 1; alunos <= quantidadeDeAlunos; alunos++) {
 
-         let nomes = prompt(`Qual é o Nome do Aluno N:${alunos}?`)
-         let genero = prompt(`É Menino (M) ou Menina? (F) N:${alunos}?`).trim().toUpperCase();
+      let nomes = prompt(`Qual é o Nome do Aluno N:${alunos}?`)
+      let genero = prompt(`É Menino (M) ou Menina? (F) N:${alunos}?`).trim().toUpperCase();
 
-         if (genero === "M") {
+      if (genero === "M") {
 
-            chad.push(nomes);
-            
-         } else {
+         chad.push(nomes);
 
-            woman.push(nomes);
-            
-         }
-    }
+      } else {
 
-    document.write(`Quantidade de Alunos: ${quantidadeDeAlunos} <br> Meninos: ${chad.sort().join(" - ")} <br> Meninas: ${woman.sort().join(" - ")}`)
+         woman.push(nomes);
+
+      }
+   }
+
+   document.write(`Quantidade de Alunos: ${quantidadeDeAlunos} <br> Meninos: ${chad.sort().join(" - ")} <br> Meninas: ${woman.sort().join(" - ")}`)
 
 </script>
